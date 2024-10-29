@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { opponent: "Vanderbilt", result: "L 41-35 ", date: "2024-10-05T16:35:00", channel: "TBA", location: "Nashville, Tenn." },
         { opponent: "South Carolina", result: "W 27-25", date: "2024-10-12T12:00:00", channel: "ABC or ESPN", location: "Tuscaloosa, Ala." },
         { opponent: "Tennessee", result: "L 24-17", date: "2024-10-19T00:00:00", channel: "TBA", location: "Knoxville, Tenn." },
-        { opponent: "Missouri", result: "w 25-0", date: "2024-10-26T00:00:00", channel: "TBA", location: "Tuscaloosa, Ala." },
+        { opponent: "Missouri", result: "w 34-0", date: "2024-10-26T00:00:00", channel: "TBA", location: "Tuscaloosa, Ala." },
         { opponent: "LSU", result: "", date: "2024-11-09T00:00:00", channel: "TBA", location: "Baton Rouge, La." },
         { opponent: "Mercer", result: "", date: "2024-11-16T14:00:00", channel: "ESPN+/SEC Network+", location: "Tuscaloosa, Ala." },
         { opponent: "Oklahoma", result: "", date: "2024-11-23T00:00:00", channel: "TBA", location: "Norman, Okla." },

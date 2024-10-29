@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alabama Football</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            
+                <img src="images/alabama-logo.png" alt="Alabama Logo" class="logo">
+            <nav id="sideNav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#athletes">Athletes</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#results">Recent Results</a></li>
+                    <li><a href="#highlight-reel">Highlights</a></li>
+                </ul>
+            </nav>
+            <img src="images/menu.png" id="menuBtn">
+        </div>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="header-col-1">
+                <h1>Alabama <span class="highlight">Crimson Tide</span> <span class="highlight">Football</span></h1>
+                <div class="color-options">
+                    <button class="color-btn" data-bgcolor="#000000" data-textcolor="#ffffff">Dark Theme</button>
+                    <button class="color-btn" data-bgcolor="#9e1b32" data-textcolor="#000000">Red Theme</button>
+                    <button class="color-btn" data-bgcolor="#ffffff" data-textcolor="#000000">Light Theme</button>
+                    <button class="color-btn" data-bgcolor="#828A8F" data-textcolor="#ffffff">Grey Theme</button>
+                    <button class="alabama-logo-btn" data-bgimage="url('images/images.png')">Alabama Logo</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2 class="sub-title">About Alabama Crimson Tide</h2>
+            <div class="about-content">
+                <div class="about-col-1">
+                    <img src="images/b.jpg" alt="Bryant-Denny Stadium, Tuscaloosa">
+                </div>
+                <div class="about-col-2">
+                    <p>The Alabama Crimson Tide football program proudly represents the University of Alabama in the highly competitive world of college football, where it has established itself as a dominant force. With a rich and storied history spanning over a century, the team is renowned for its remarkable success on the field, which includes winning numerous national championships and producing countless All-American athletes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="athletes">
+            <h2 class="sub-title">Featured Athletes</h2>
+            <div class="portfolio-list">
+                <div class="portfolio-item">
+                    <div class="featured-athlete">
+                        <img src="images/athlete-1.jpg" alt="Tua Tagovailoa">
+                        <div class="layer overlay">
+                            <h3>Tua Tagovailoa</h3>
+                            <p>Tua became an Alabama legend with his game-winning touchdown pass in the 2018 National Championship as a freshman. His ability to make big plays, combined with his leadership, helped transform Alabama's offense into a high-scoring machine.</p>
+                            <a href="#" target="_blank" onclick="window.open('https://www.youtube.com/watch?v=V_r5RCjRdqM', '_blank'); return false;" class="highlight-btn">View Highlights</a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="featured-athlete">
+                        <img src="images/athlete-2.jpg" alt="Derrick Henry">
+                        <div class="layer overlay">
+                            <h3>Derrick Henry</h3>
+                            <p>Henry was a dominant force, winning the Heisman Trophy in 2015. He powered Alabama to a national championship that same season, setting SEC records with 2,219 rushing yards and 28 touchdowns.</p>
+                            <a href="#" target="_blank" onclick="window.open('https://www.youtube.com/watch?v=uPD6tdCEdFQ', '_blank'); return false;" class="highlight-btn">View Highlights</a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="featured-athlete">
+                        <img src="images/smith.jpg" alt="DeVonta Smith">
+                        <div class="layer overlay">
+                            <h3>DeVonta Smith</h3>
+                            <p>DeVonta Smith was a standout wide receiver for Alabama and became one of the most exciting players in college football. In 2020, he won the Heisman Trophy, becoming the first wide receiver to win it since 1991. Known for his speed and precise route running, he played a big role in Alabama’s national championship win that season.</p>
+                            <a href="#" target="_blank" onclick="window.open('https://www.youtube.com/watch?v=tQhkbY14Q54', '_blank'); return false;" class="highlight-btn">View Highlights</a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+         
+
+        <section id="schedule">
+            <h2 class="sub-title">2024 Upcoming Schedule</h2>
+            <div id="live-score" class="live-score"></div>
+            <div id="countdown" class="countdown"></div>
+            <div class="schedule-list">
+            </div>
+            <div class="learn-more">
+                <!-- Opens full schedule in a new tab -->
+                <section id="results">
+                <div class="recent-results-section">
+                    <h2>Recent Results</h2>
+                    <div class="results-list"></div>
+                    <button id="load-more-results">Load More Results</button>
+                </div>
+                
+                
+        <!-- Fan Poll Section -->
+        <div id="countdown"></div>
+        <section id="fanpoll">
+            <h2 class="sub-title">Fan Poll: Who's Your MVP?</h2>
+            <form id="poll-form">
+                <label for="player-name">Enter Player Name:</label>
+                <input type="text" id="player-name" name="player-name" required>
+                <button type="submit">Vote!</button>
+            </form>
+            <div id="poll-results"></div>
+        </section>
+
+        <!-- Highlight Reel Section -->
+        <section id="highlight-reel">
+            <h2 class="sub-title">Crimson Tide Highlights</h2>
+            <div id="video-container">
+                <iframe id="video-player" width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <button id="play-video">Play</button>
+            <button id="next-highlight">Next Highlight</button>
+        </section>
+    </main>
+    <div class="learn-more">
+        <!-- Opens full schedule in a new tab -->
+        <a href="#" target="_blank" onclick="window.open('https://rolltide.com/sports/football', '_blank'); return false;" class="learn-more-btn">Learn More</a> 
+    </div>
+</section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Pro-Master Painting Inc. All rights reserved.</p>
+    </footer>
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script> 
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <!-- Inline Script for Video -->
+    <script>
+        // Array of YouTube video IDs
+        const videoIds = ['qx93e3TBktY', 'JGwGXA7hqdg', 'yYk0q-HGphE', 'ae4vpzIxL6k']; // Replace with your actual video IDs
+        let currentVideoIndex = 0;
+
+        const videoPlayer = document.getElementById('video-player');
+        const playButton = document.getElementById('play-video');
+        const nextButton = document.getElementById('next-highlight');
+
+        // Function to load and play the video
+        function playVideo(videoId) {
+            videoPlayer.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+        }
+
+        // Play current video on button click
+        playButton.addEventListener('click', function() {
+            playVideo(videoIds[currentVideoIndex]);
+        });
+
+        // Load next video on button click
+        nextButton.addEventListener('click', function() {
+            currentVideoIndex = (currentVideoIndex + 1) % videoIds.length;
+            playVideo(videoIds[currentVideoIndex]);
+        });
+    </script>
+</body>
+</html>

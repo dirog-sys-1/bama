@@ -1,0 +1,604 @@
+/*************************************
+        Basic Styles
+*************************************/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    transition: background-color 0.5s ease, color 0.5s ease, background-image 0.5s ease;
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: top left;
+}
+
+.container {
+    padding: 20px 10%;
+}
+
+.logo {
+    width: 140px;
+}
+/*************************************
+        Nav Bar Styles
+*************************************/
+#sideNav {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background: transparent;
+    z-index: 2;
+    transition: .5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 20px 0;
+}
+
+#menuBtn {
+    width: 75px;
+    position: fixed;
+    right: 65px;
+    top: 35px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.5s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #D50A0A;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: width 0.5s, background-color 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+/*************************************
+        Header Styles
+*************************************/    
+.header-col-1 {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.header-text h1 {
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+.highlight {
+    color: #D50A0A;
+    text-shadow: 0px 0px 3px #fff;
+}
+
+.color-options {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.color-btn, .alabama-logo-btn { 
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #D50A0A;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.color-btn:hover, .alabama-logo-btn:hover {
+    background-color: #B71C1C;
+}
+
+#about {
+    padding: 50px 0;
+    color: #ccc;
+}
+
+.sub-title {
+    font-size: 2.5rem;
+    color: white;
+    transition: color 0.5s ease;
+}
+
+.about-col-1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.about-col-1 img {
+    width: 70%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#athletes {
+    padding: 50px 0; /* Top and bottom padding for spacing */
+  }
+  
+  .portfolio-list {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space items evenly */
+    flex-wrap: wrap; /* Allow items to wrap in smaller screens */
+    padding: 0 5%; /* Add padding to prevent edge gripping */
+  }
+  
+  .portfolio-item {
+    flex-basis: calc(30% - 20px); /* Increase width for larger boxes */
+    position: relative; /* Positioning context for layers */
+    margin-bottom: 20px; /* Spacing between items */
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Ensure content does not overflow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  }
+  
+  .portfolio-item img {
+    width: 100%; /* Make images fill their container */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto; /* Allow height to adjust based on content */
+    background: rgba(213, 10, 10, 0.9); /* Dark overlay with transparency */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  
+  .layer h3 {
+     font-weight: bold;
+     margin-bottom: .5rem; /* Space between title and description */
+  }
+  
+  .layer p {
+     text-align: center; /* Center align text */
+     margin-top: .5rem; /* Space between title and description */
+  }
+.highlight-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 10px;
+}
+
+.highlight-btn:hover {
+    background-color: rgba(136, 82, 82, 0.6);
+    transform: scale(1.05);
+}
+
+.schedule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.schedule-item {
+    background: #8b7272;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-item h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.learn-more {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.learn-more-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #8b7272;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.learn-more-btn:hover {
+    background-color: rgba(136, 82, 82, 0.6);
+    transform: scale(1.05);
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #8b7272;
+    color: #fff;
+    transition: background-color 0.5s, color 0.5s ease;
+}
+
+.live-score {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #D50A0A;
+    font-weight: bold;
+}
+
+.countdown {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #D50A0A;
+}
+
+.countdown-digit {
+    display: inline-block;
+    perspective: 1000px;
+    margin: 0 5px;
+    text-align: center;
+  }
+  
+  .digit-top, .digit-bottom {
+    background: #D50A0A;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .digit-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(50%);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+  }
+  
+  .countdown-digit.flip .digit-top {
+    animation: flip-up 0.5s;
+  }
+  
+  .countdown-digit.flip .digit-bottom {
+    animation: flip-down 0.5s;
+  }
+  
+  @keyframes flip-up {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(-50%); opacity: 0; }
+    100% { transform: translateY(-50%); opacity: 0; }
+  }
+  
+  @keyframes flip-down {
+    0% { transform: translateY(50%); opacity: 0; }
+    50% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  
+  .label {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+@media (max-width: 768px) {
+    .portfolio-item {
+        flex-basis: 100%;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+/* Recent Results Styles */
+#recent-results {
+    margin-top: 30px;
+    padding: 20px 0;
+  }
+  
+  .results-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Three boxes per row */
+    gap: 1rem;
+  }
+  
+  .result-item {
+    background: #8b7272;
+    border-radius: 15px; /* Rounded corners */
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px; /* Fixed height for smaller boxes */
+  }
+  
+  .result-item h3 {
+    margin: 0;
+    font-size: 1.2rem; /* Adjusted font size */
+  }
+  
+  .result-item p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem; /* Adjusted font size */
+  }
+  
+  #load-more-results {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #D50A0A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #load-more-results:hover {
+    background-color: #B71C1C;
+  }
+  
+  @media only screen and (max-width: 768px) {
+      .results-list {
+          grid-template-columns: repeat(2, 1fr); /* Two boxes per row on tablets */
+      }
+  }
+  
+  @media only screen and (max-width: 480px) {
+      .results-list {
+          grid-template-columns: repeat(1, 1fr); /* One box per row on mobile */
+      }
+  }
+
+/* Fan Poll Styles */
+#fanpoll {
+    margin: 50px 0;
+    text-align: center;
+}
+
+#poll-form {
+    margin-top: 20px;
+}
+
+#poll-form input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+#poll-form button {
+    padding: 10px 20px;
+    background-color: #D50A0A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#poll-results {
+    margin-top: 20px;
+    font-size: 18px;
+}
+/*highlight reel styles */
+#highlight-reel {
+    text-align: center;
+    margin: 50px 0;
+}
+
+#video-container {
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#video-player {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+#play-video, #next-highlight {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #D50A0A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#play-video:hover, #next-highlight:hover {
+    background-color: #B71C1C;
+}
+
+.featured-athlete {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Set this to full viewport height */
+    overflow: hidden;
+}
+
+.featured-athlete img {
+    width: 100%;
+    height: 100%; /* Ensures the image takes up the full container */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.featured-athlete .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Add an optional overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-athlete .overlay h2,
+.featured-athlete .overlay p {
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+.featured-athlete .overlay .btn {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 15px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.featured-athlete .overlay .btn:hover {
+    background-color: #d50a0a; /* Button hover color */
+}
+
+
+/* General mobile styles for iPhone (portrait orientation) */
+@media only screen and (max-width: 600px) {
+    /* Adjust container padding for mobile */
+    .container {
+        padding: 10px 5%;
+    }
+
+    /* Adjust header text size */
+    .header-text h1 {
+        font-size: 2rem;
+    }
+
+    .header-text p {
+        font-size: 1rem;
+    }
+
+    /* Make the navigation menu wrap */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    /* Resize logo for smaller screens */
+    .logo {
+        width: 100px;
+    }
+
+    /* Adjust about section image size */
+    .about-col-1 img {
+        width: 80%; /* Make the image larger */
+    }
+
+    /* Portfolio section adjustments */
+    .portfolio-list {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .portfolio-item {
+        flex-basis: calc(100% - 20px); /* Full width on small screens */
+    }
+
+
+    .portfolio-item img {
+        width: fill; /* Adjust size on mobile */
+        height: fill; /* Maintain aspect ratio */
+    }
+
+
+    /* Adjust button sizes for mobile */
+    .color-btn, .highlight-btn, .learn-more-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    /* Adjust schedule items */
+    .schedule-item h3 {
+        font-size: 1.25rem;
+    }
+
+    .schedule-item p {
+        font-size: 0.9rem;
+    }
+
+    @media only screen and (max-width: 1200px) {
+        .portfolio-item {
+            flex-basis: calc(45% - 20px); /* Adjust for medium screens */
+        }
+    }
+    
+    
+}
